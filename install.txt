@@ -1,3 +1,0 @@
-chmod u+x exec.sh
-
-@reboot /home/911exp/luces_maqueta/exec.sh

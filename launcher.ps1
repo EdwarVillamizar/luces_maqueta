@@ -1,1 +1,0 @@
-vrtenv\Scripts\activate
