@@ -13,3 +13,14 @@ Inicio automatico
 
 sudo crontab -e
 @reboot /bin/bash -c 'source /home/911exp/luces_maqueta/venv/bin/activate && python /home/911exp/luces_maqueta/app.py >> /home/911exp/luces_maqueta/log.txt 2>&1'
+
+nmcli connection show
+nmcli connection show "preconfigured"
+
+sudo nmcli connection down "preconfigured"
+sudo nmcli connection up "preconfigured"
+
+sudo nmcli connection modify "preconfigured" ipv4.addresses 10.1.1.10/24
+sudo nmcli connection modify "preconfigured" ipv4.gateway 10.1.1.1
+sudo nmcli connection modify "preconfigured" ipv4.dns 10.1.1.1
+sudo nmcli connection modify "preconfigured" ipv4.method manual
