@@ -27,7 +27,8 @@ INITIAL_LED_STATUS = {
         "Retail 1": False,
         "Retail 2": False,
         "Retail 3": False,
-        "Historic House": False
+        "Historic House": False,
+        "Site": False
     },
     "level2": {
         "Office 2": False,

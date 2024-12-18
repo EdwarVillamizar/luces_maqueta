@@ -64,6 +64,7 @@
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Retail 3',59,95,1,1)">Retail 3</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Retail 1',110,170,1,1)">Retail 1</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Historic House',284,299,1,2)">Historic House</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level1','Site',2,1)">Site</button></div>
                 </div>
                 
                 <div class="row justify-content-center">
@@ -142,9 +143,9 @@
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','505',36,46,4,1)">505</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','506',25,34,4,1)">506</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','507',14,23,4,1)">507</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','508',131,141,4,1)">508</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','509',120,129,4,1)">509</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','510',108,117,4,1)">510</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','508',213,219,4,1)">508</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','509',190,208,4,1)">509</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','510',180,186,4,1)">510</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','511',169,178,4,1)">511</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','512',157,166,4,1)">512</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level5','513',148,154,4,1)">513</button></div>
@@ -164,23 +165,22 @@
             </div>
             <div class="card-body">
                 <div class="row justify-content-center">
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','601',72,81,1,2)">601</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','602',61,70,1,2)">602</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','603',49,59,1,2)">603</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','604',38,46,1,2)">604</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','605',28,36,1,2)">605</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','606',18,26,1,2)">606</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','607',6,15,1,2)">607</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','608',122,132,5,1)">608</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','609',109,119,1,2)">609</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','610',96,106,1,2)">610</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','611',167,175,1,2)">611</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','612',155,163,1,2)">612</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','613',146,152,1,2)">613</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','614',123,142,1,2)">614</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','615',112,119,1,2)">615</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','616',101,110,1,2)">616</button></div>
-
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','601',89,97,5,2)">601</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','602',78,87,5,2)">602</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','603',65,75,5,2)">603</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','604',52,63,5,2)">604</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','605',40,50,5,2)">605</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','606',28,36,5,2)">606</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','607',17,26,5,2)">607</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','608',211,217,5,1)">608</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','609',183,206,5,2)">609</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','610',178,184,5,2)">610</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','611',167,175,5,2)">611</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','612',155,163,5,2)">612</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','613',146,152,5,2)">613</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','614',123,142,5,2)">614</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','615',112,119,5,2)">615</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level6','616',101,110,5,2)">616</button></div>
                 </div>
             </div>
         </div>
@@ -228,7 +228,7 @@
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','805',42,52,3,2)">805</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','806',30,39,3,2)">806</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','807',18,27,3,2)">807</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','808',214,220,7,1)">808</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','808',214,220,3,2)">808</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','809',190,210,3,2)">809</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','810',181,187,3,2)">810</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','811',170,178,3,2)">811</button></div>
@@ -237,9 +237,6 @@
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','814',127,144,3,2)">814</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','815',115,121,3,2)">815</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level8','816',104,112,3,2)">816</button></div>
-                    
-                    
-
                 </div>
             </div>
         </div>
@@ -251,9 +248,9 @@
             </div>
             <div class="card-body">
                 <div class="row justify-content-center">
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','PH1',269,298,2,2)">PH1</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','PH2',230,260,3,2)">PH2</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','Common',279,294,3,2)">Common</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level9','PH1',269,298,2,2)">PH1</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level9','PH2',230,260,3,2)">PH2</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level9','Common',279,294,3,2)">Common</button></div>
                 </div>
             </div>
         </div>
