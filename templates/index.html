@@ -68,6 +68,7 @@
                 
                 <div class="row justify-content-center">
                 <div class="col-md-2">
+                    <button class="btn btn-dark btn-custom" onclick="on_all_strips('on')">All On</button>
                     <button class="btn btn-dark btn-custom" onclick="off_all_strips('off')">All Off</button>
                 </div>
             </div>
@@ -308,6 +309,13 @@
                     console.log(data.menssage);
                 }
             );
+            return false;
+        }
+
+        function on_all_strips(turn) {
+            $.getJSON($SCRIPT_ROOT + '/on-all-strips', { turn: turn }, function(data) {
+                console.log(data.message);
+            });
             return false;
         }
 

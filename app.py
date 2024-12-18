@@ -348,13 +348,168 @@ def set_dual_range_leds():
 
     return jsonify(response)
 
+@app.route('/on-all-strips')
+def on_all_strips():
+    
+    try:
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 1
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 2
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 3
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 4
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+        
+    except:
+        
+        print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_1 {IP['RGB_LIGHT_STRIP_1']}")
+
+    try:
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 1
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_2'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 2
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_2'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 3
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_2'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 4
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_2'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+        
+    except:
+        
+        print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_2 {IP['RGB_LIGHT_STRIP_2']}")
+
+    try:
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 1
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_3'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 2
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_3'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 3
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_3'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        params = {
+            'red_brightness': 255,
+            'green_brightness': 155,
+            'blue_brightness': 40,
+            'led_position_min1': 0,
+            'led_position_max1': 300,
+            'strip_number': 4
+        }
+        
+        requests.get("http://"+IP['RGB_LIGHT_STRIP_3'], params=params, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+        
+    except:
+        
+        print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_3 {IP['RGB_LIGHT_STRIP_3']}")
+        
+    response = {'menssage': 'Se han apagado todos'}
+    
+    return jsonify(response)
+
 @app.route('/off-all-strips')
 def off_all_strips():
     
 	turn = request.args.get('turn', type=str)
-
-	reset_led_status()
- 
+    
 	try:
 		requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params={'strips':turn}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
 		
