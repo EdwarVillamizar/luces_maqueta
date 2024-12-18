@@ -408,8 +408,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 1
         }
         
@@ -419,8 +419,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 2
         }
         
@@ -430,8 +430,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 3
         }
         
@@ -441,8 +441,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 4
         }
         
@@ -458,8 +458,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 1
         }
         
@@ -469,8 +469,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 2
         }
         
@@ -480,8 +480,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 3
         }
         
@@ -491,8 +491,8 @@ def on_all_strips():
             'red_brightness': 255,
             'green_brightness': 155,
             'blue_brightness': 40,
-            'led_position_min1': 0,
-            'led_position_max1': 300,
+            'led_position_min': 0,
+            'led_position_max': 300,
             'strip_number': 4
         }
         
