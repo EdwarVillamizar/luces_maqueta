@@ -1,0 +1,110 @@
+{
+    "level1": {
+        "Lobby": false,
+        "Retail 1": false,
+        "Retail 2": false,
+        "Retail 3": false,
+        "Historic House": false
+    },
+    "level2": {
+        "Office 2": false,
+        "Lobby": false,
+        "Office 1": false,
+        "Parking": false
+    },
+    "level3": {
+        "Parking": false
+    },
+    "level4": {
+        "407": false,
+        "406": false,
+        "405": false,
+        "404": false,
+        "403": false,
+        "402": false,
+        "401": false,
+        "412": false,
+        "411": false,
+        "410": false,
+        "409": false,
+        "408": false,
+        "Amenities": false
+    },
+    "level5": {
+        "507": false,
+        "506": false,
+        "505": false,
+        "504": false,
+        "503": false,
+        "502": false,
+        "501": false,
+        "516": false,
+        "515": false,
+        "514": false,
+        "513": false,
+        "512": false,
+        "511": false,
+        "510": false,
+        "509": false,
+        "508": false
+    },
+    "level6": {
+        "607": false,
+        "606": false,
+        "605": false,
+        "604": false,
+        "603": false,
+        "602": false,
+        "601": false,
+        "616": false,
+        "615": false,
+        "614": false,
+        "613": false,
+        "612": false,
+        "611": false,
+        "610": false,
+        "609": false,
+        "608": false
+    },
+    "level7": {
+        "707": false,
+        "706": false,
+        "705": false,
+        "704": false,
+        "703": false,
+        "702": false,
+        "701": false,
+        "716": false,
+        "715": false,
+        "714": false,
+        "713": false,
+        "712": false,
+        "711": false,
+        "710": false,
+        "709": false,
+        "708": false
+    },
+    "level8": {
+        "807": false,
+        "806": false,
+        "805": false,
+        "804": false,
+        "803": false,
+        "802": false,
+        "801": false,
+        "816": false,
+        "815": false,
+        "814": false,
+        "813": false,
+        "812": false,
+        "811": false,
+        "810": false,
+        "809": false,
+        "808": false
+    },
+    "level9": {
+        "PH1": false,
+        "PH2": false,
+        "Common": false
+    }
+}

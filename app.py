@@ -228,9 +228,9 @@ def set_range_leds():
 
     if current_state == False:
 
-        red_brightness = 100
-        green_brightness = 100
-        blue_brightness = 100
+        red_brightness = 255
+        green_brightness = 155
+        blue_brightness = 40
 
     else:
 
@@ -268,7 +268,81 @@ def set_range_leds():
 
         except:
 
-            print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_2 {IP['RGB_LIGHT_STRIP_3']}")
+            print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_3 {IP['RGB_LIGHT_STRIP_3']}")
+            
+    response = {'menssage': 'Recibido'}
+
+    return jsonify(response)
+
+@app.route('/set-dual-range-leds')
+def set_dual_range_leds():
+    
+    level=request.args.get('level', type=str)
+    name_button=request.args.get('name_button', type=str)
+
+        # Primer rango
+    led_position_min1 = request.args.get('led_position_min1', type=int)
+    led_position_max1 = request.args.get('led_position_max1', type=int)
+    
+    # Segundo rango
+    led_position_min2 = request.args.get('led_position_min2', type=int)
+    led_position_max2 = request.args.get('led_position_max2', type=int)
+
+    strip_number = request.args.get('strip_number', type=int)
+    device_number = request.args.get('device_number', type=int)
+
+    status = load_led_status()
+
+    # Cambiar el estado del LED
+    current_state = status[level][name_button]
+
+    if current_state == False:
+
+        red_brightness = 255
+        green_brightness = 155
+        blue_brightness = 40
+
+    else:
+
+        red_brightness = 0
+        green_brightness = 0
+        blue_brightness = 0
+
+    status[level][name_button] = not current_state
+    save_led_status(status)
+    
+    if device_number == 1:
+
+        try:
+
+            requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params={'red_brightness':red_brightness,'green_brightness':green_brightness,'blue_brightness':blue_brightness,'led_position_min':led_position_min1,'led_position_max':led_position_max1,'strip_number':strip_number}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+            requests.get("http://"+IP['RGB_LIGHT_STRIP_1'], params={'red_brightness':red_brightness,'green_brightness':green_brightness,'blue_brightness':blue_brightness,'led_position_min':led_position_min2,'led_position_max':led_position_max2,'strip_number':strip_number}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        except:
+
+            print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_1 {IP['RGB_LIGHT_STRIP_1']}")
+
+    elif device_number==2:
+
+        try:
+
+            requests.get("http://"+IP['RGB_LIGHT_STRIP_2'], params={'red_brightness':red_brightness,'green_brightness':green_brightness,'blue_brightness':blue_brightness,'led_position_min':led_position_min1,'led_position_max':led_position_max1,'strip_number':strip_number}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+            requests.get("http://"+IP['RGB_LIGHT_STRIP_2'], params={'red_brightness':red_brightness,'green_brightness':green_brightness,'blue_brightness':blue_brightness,'led_position_min':led_position_min2,'led_position_max':led_position_max2,'strip_number':strip_number}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        except:
+
+            print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_2 {IP['RGB_LIGHT_STRIP_2']}")
+    
+    elif device_number==3:
+
+        try:
+
+            requests.get("http://"+IP['RGB_LIGHT_STRIP_3'], params={'red_brightness':red_brightness,'green_brightness':green_brightness,'blue_brightness':blue_brightness,'led_position_min':led_position_min1,'led_position_max':led_position_max1,'strip_number':strip_number}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+            requests.get("http://"+IP['RGB_LIGHT_STRIP_3'], params={'red_brightness':red_brightness,'green_brightness':green_brightness,'blue_brightness':blue_brightness,'led_position_min':led_position_min2,'led_position_max':led_position_max2,'strip_number':strip_number}, timeout=(REQUEST_CONFIG['CONNECT_TIMEOUT'], REQUEST_CONFIG['READ_TIMEOUT']))
+
+        except:
+
+            print(f"No se encuentra el dispositivo: RGB_LIGHT_STRIP_3 {IP['RGB_LIGHT_STRIP_3']}")
             
     response = {'menssage': 'Recibido'}
 

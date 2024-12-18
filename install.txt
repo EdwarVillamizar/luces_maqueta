@@ -1,0 +1,3 @@
+chmod u+x exec.sh
+
+@reboot /home/pi/telemetryAttendance/server/exec.sh

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -63,7 +63,7 @@
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Retail 2',5,35,1,1)">Retail 2</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Retail 3',59,95,1,1)">Retail 3</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Retail 1',110,170,1,1)">Retail 1</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Historic House',null,null,1,1)">Historic House</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level1','Historic House',284,299,1,2)">Historic House</button></div>
                 </div>
                 
                 <div class="row justify-content-center">
@@ -82,7 +82,7 @@
             </div>
             <div class="card-body">
                 <div class="row justify-content-center">
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level2','Lobby',236,242,1,1)">Lobby</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_dual_range_leds('level2','Lobby',47,54,236,242,1,1)">Lobby</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level2','Office 1',245,277,1,1)">Office 1</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level2','Office 2',201,232,1,1)">Office 2</button></div>
                     <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level2','Parking',null,null,2,1)">Parking</button></div>
@@ -97,7 +97,7 @@
             </div>
             <div class="card-body">
                 <div class="row justify-content-center">
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_range_leds('level3','Parking',14,296,2,1)">Parking</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="set_dual_range_leds('level3','Parking',14,45,57,260,2,1)">Parking</button></div>
                 </div>
             </div>
         </div>
@@ -250,9 +250,9 @@
             </div>
             <div class="card-body">
                 <div class="row justify-content-center">
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','PH1',1,1)">PH1</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','PH2',2,1)">PH2</button></div>
-                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','Common',1,1)">Common</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','PH1',269,298,2,2)">PH1</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','PH2',230,260,3,2)">PH2</button></div>
+                    <div class="col-md-2"><button class="btn btn-dark btn-custom" onclick="toggle_actuator('level9','Common',279,294,3,2)">Common</button></div>
                 </div>
             </div>
         </div>
@@ -272,6 +272,25 @@
                 },
                 function(data) {
                     console.log(data.menssage);
+                }
+            );
+            return false;
+        }
+
+        function set_dual_range_leds(level, name_button, led_position_min1, led_position_max1, led_position_min2, led_position_max2, strip_number, device_number) {
+            $.getJSON($SCRIPT_ROOT + '/set-dual-range-leds',
+                {   
+                    level: level,
+                    name_button: name_button, 
+                    led_position_min1: led_position_min1, 
+                    led_position_max1: led_position_max1, 
+                    led_position_min2: led_position_min2, 
+                    led_position_max2: led_position_max2, 
+                    strip_number: strip_number,
+                    device_number: device_number
+                },
+                function(data) {
+                    console.log(data.message); // Asegúrate de que 'message' sea el nombre correcto de la clave en tu respuesta JSON
                 }
             );
             return false;
